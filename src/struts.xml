@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devModel" value="true"/>
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <package name="com.zorenv" namespace = "/" extends="struts-default">
+    
+    	<!-- 登陆Action -->
+        <action name="login" class="com.zorenv.LoginAction" method="execute">
+            <result name="success">/top.jsp</result>
+            <result name="error">/Error.jsp</result>
+        </action>
+        <!-- 添加图书和作者的Action -->
+		 <action name="addAction" 
+			class="com.zorenv.AddAction" >
+		    <result name="success">/top.jsp</result>
+		    <result name="needAdd">/AddAuthor.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		</action>
+		 <action name="addAuthorAction" 
+			class="com.zorenv.AddAction" method="addAuthor">
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		</action>
+		<!-- 删除的Action -->
+		 <action name="deleteBook" 
+			class="com.zorenv.DeleteBook">
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		</action>
+		<!-- 搜索的Action -->
+        <action name="searchAction" 
+			class="com.zorenv.SearchAction" >
+		    <result name="success">/top.jsp</result>
+		    <result name="error">/Error.jsp</result>
+		</action>
+    </package>
+
+    <!-- Add packages here -->
+
+</struts>
