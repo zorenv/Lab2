@@ -140,12 +140,6 @@ input[id="addBooks"] {
 					out.print("作者");
 				%>
 			</th>
-			
-			<th>
-				<%
-					out.print("修改");
-				%>
-			</th>
 			<th>
 				<%
 					out.print("删除");
@@ -209,9 +203,6 @@ input[id="addBooks"] {
 					out.print(name[num]);
 				%></a>
 			</td>
-			<td>
-			 <form action="updateBook"><input type="hidden" name="ISBN" value=<%=in %>><input type="submit" value="修改" style="color:#FF0000;"></form>
-		     </td>
 			<td>
 			 <form action="deleteBook"><input type="hidden" name="ISBN" value=<%=in %>><input type="submit" value="删除" onclick="return confirm('确认删除此书？')" style="color:#FF0000;"></form>
 		     </td>
