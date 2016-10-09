@@ -218,6 +218,7 @@ input[id="addBooks"] {
 		}
 		%>
 	</table>
+	<li ><a href="/Struts2_BookManage/top.jsp" style="font-size:25px;">返回</a></li>
 	<%
 	if(no==0 && book!=null){
 			%>
