@@ -177,7 +177,7 @@ input[id="addBooks"] {
 					in=rs.getInt(1);
 				%>
 			</td>
-			<td><a href="/Struts2_BookManage/book.jsp?books=<%=in %>">
+			<td><a href="/book.jsp?books=<%=in %>">
 				<%
 					out.print(rs.getString(2));
 				%>
@@ -199,7 +199,7 @@ input[id="addBooks"] {
 				    int num=rs.getInt(6);
 				%>
 			</td>
-			<td><a href="/Struts2_BookManage/author.jsp?author=<%=num %>">
+			<td><a href="/author.jsp?author=<%=num %>">
 				<% 
 					out.print(name[num]);
 				%></a>
@@ -209,8 +209,8 @@ input[id="addBooks"] {
 		     </td>
 		    <%-- 
 			<td>
-		      <a href="/Struts2_BookManage/upload.jsp?isbn=<%=in %>"><input type="submit" value="上传文件" ></a>
-			  <a href="/Struts2_BookManage/download.jsp?isbn=<%=in %>"><input type="submit" value="下载文件" ></a>
+		      <a href="/upload.jsp?isbn=<%=in %>"><input type="submit" value="上传文件" ></a>
+			  <a href="/download.jsp?isbn=<%=in %>"><input type="submit" value="下载文件" ></a>
 			</td>
 			--%>
 		</tr>
@@ -219,7 +219,7 @@ input[id="addBooks"] {
 		}
 		%>
 	</table>
-	<li ><a href="/Struts2_BookManage/top.jsp" style="font-size:25px;">返回</a></li>
+	<li ><a href="/top.jsp" style="font-size:25px;">返回</a></li>
 	<%
 	if(no==0 && book!=null){
 			%>
@@ -231,15 +231,15 @@ input[id="addBooks"] {
 			<% 
 		}else if(no == 0){
 			%>
-            <p><a href="/Struts2_BookManage/Add.jsp"><input id="addBooks" type="submit" value="添加"></a></p>
+            <p><a href="/Add.jsp"><input id="addBooks" type="submit" value="添加"></a></p>
 			<% 
 		}
 	%>
-	<ul id="navs" data-open="收" data-close="功">
-	<li><a href="/Struts2_BookManage/top.jsp">首</a></li>
-	<li><a href="/Struts2_BookManage/Search.jsp">查</a></li>
-	<li><a href="/Struts2_BookManage/Add.jsp">添</a></li>
-	<li><a href="/Struts2_BookManage/index.jsp">退</a></li>
+	<ul id="navs" data-open="收" data-close="功能">
+	<li><a href="/top.jsp">首页</a></li>
+	<li><a href="/Search.jsp">查询</a></li>
+	<li><a href="/Add.jsp">添加</a></li>
+	<li><a href="/index.jsp">退出</a></li>
 </ul>
    
 <script type="text/javascript" src="js/jquery.min.js"></script>

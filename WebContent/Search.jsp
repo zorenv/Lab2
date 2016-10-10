@@ -54,10 +54,10 @@ body {
 <body style="width:100%; height:100%;background: url('images/39.jpg');" > 
 	<!--  <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
 	<img src="images/39.jpg" height="100%" width="100%"/> -->
- -->	
+ 	
     <div id="search">
      <s:form  action="searchAction" >
-            <input name="book" type="text" placeholder="请输入书名..."/>
+            <input name="searchauthor" type="text" placeholder="请输入作者名..."/>
             <input type="submit" value="搜索"/>
           </s:form>
     </div>

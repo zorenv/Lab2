@@ -2,7 +2,6 @@ package com.zorenv;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -10,16 +9,19 @@ import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class DeleteBook extends ActionSupport{
-	 static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+	 //static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
      //数据库的名称为 EXAMPLE
-     static final String DB_URL = "jdbc:mysql://localhost:3306/BookManage?useUnicode=true&characterEncoding=utf8";
+     //static final String DB_URL = "jdbc:mysql://localhost:3306/BookManage?useUnicode=true&characterEncoding=utf8";
      //  数据库用户和密码
-     static final String USER = "root";
-     static final String PASS = "112122";
-     static final String taname = "BookManage";
+     //static final String USER = "root";
+     //static final String PASS = "112122";
+     //static final String taname = "BookManage";
+    String DB_URL = "jdbc:mysql://dmrsesekwhul.rds.sae.sina.com.cn:10510/bookmanage";
+    String USER = "bookmanage";
+    String PASS = "112122";
      //表名   
-     static final String tableName = "Book";  
-     static final String tbname = "Author";
+     static final String tableName = "book";  
+     static final String tbname = "author";
 	private String ISBN;
 	public String execute() throws Exception {
 		Connection conn = null;

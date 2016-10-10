@@ -36,7 +36,7 @@
 		<!-- 搜索的Action -->
         <action name="searchAction" 
 			class="com.zorenv.SearchAction" >
-		    <result name="success">/top.jsp</result>
+		    <result name="success">/author.jsp</result>
 		    <result name="error">/Error.jsp</result>
 		</action>
     </package>

@@ -11,7 +11,7 @@
 <meta name="apple-touch-fullscreen" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 <meta name="format-detection" content="telephone=no,email=no"/>
-<meta name="author" content="kuangmeng"/>
+<meta name="author" content="zorenv"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>作者信息</title>
 <style type="text/css">
@@ -69,11 +69,14 @@ h3{text-shadow:0 2px #ccc;}
 <body>
     <div style="background-color:#00BBFF;height:150px;padding-top:30px;"><h1><font style="color:white">作者信息</font></h1></div>
    <%
+   	  String search = request.getParameter("searchauthor");
       String no=request.getParameter("author");
+     
       SQLSearch ss=new SQLSearch();
       ResultSet rs= ss.getResult();
       ResultSet au= ss.getAuthor();
       while(au.next()){
+    	  if(no!=null){
     	if(au.getInt(1)==Integer.parseInt(no.trim())){  
    %>
      <table align="center" id ="customers">
@@ -163,7 +166,7 @@ h3{text-shadow:0 2px #ccc;}
 					out.print(num);
 				%>
 			</td>
-			<td><a href="/Struts2_BookManage/book.jsp?books=<%=num %>">
+			<td><a href="/book.jsp?books=<%=num %>">
 				<%
 					out.print(rs.getString("Title"));
 				%>
@@ -187,13 +190,135 @@ h3{text-shadow:0 2px #ccc;}
 		</tr>
 		<%
 			}
-		}
+			}
 		%>
 	</table>
 		<%
     	}
+    	  }else{
+    		  
+    		  if(au.getString("Name").equals(search)){  
+   %>
+     <table align="center" id ="customers">
+		<tr>
+			<td>
+				<%
+					out.print("姓名");
+				%>
+			</td>
+			<td>
+				<%
+					out.print(au.getString(2));
+				%>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%
+					out.print("年龄");
+				%>
+			</td>
+			<td>
+				<%
+					out.print(au.getInt(3));
+				%>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%
+					out.print("国籍");
+				%>
+			</td>
+			<td>
+				<%
+					out.print(au.getString(4));
+				%>
+			</td>
+		</tr>
+		</table>
+		<div style="text-align:center;background-color:#00BBFF;height:150px;padding-top:30px"><h1><font style="color:white">著作信息</font></h1></div>
+		<table align="center" id ="customers">
+		<tr>
+			<th>
+				<%
+					out.print("ISBN");
+				%>
+			</th>
+			<th>
+				<%
+					out.print("题目");
+				%>
+			</th>
+			<th>
+				<%
+					out.print("出版社");
+				%>
+			</th>
+			<th>
+				<%
+					out.print("出版日期");
+				%>
+			</th>
+			<th>
+				<%
+					out.print("价格");
+				%>
+			</th>
+		</tr>
+		<% 
+		    int col=0;
+			while (rs.next()){
+				//out.print(ss.getAuthorID(search));
+				if(rs.getInt("AuthorID")==ss.getAuthorID(search)){
+				col++;
+				if(col%2==0){
+		%>
+		<tr class = "alt">
+			<td>
+				<%
+				}else{
+					%>
+		<tr>
+		     <td>
+				<%
+				}
+				int num=rs.getInt("ISBN");
+					out.print(num);
+				%>
+			</td>
+			<td><a href="/book.jsp?books=<%=num %>">
+				<%
+					out.print(rs.getString("Title"));
+				%>
+				</a>
+			</td>
+			<td>
+				<%
+					out.print(rs.getString("Publisher"));
+				%>
+			</td>
+			<td>
+				<%
+					out.print(rs.getString("PublishDate"));
+				%>
+			</td>
+			<td>
+				<%
+					out.print(rs.getDouble("Price"));
+				%>
+			</td>
+		</tr>
+		<%
+			}
+			}
+		%>
+	</table>
+          <% 
+    		  }
+    	  }  
       }
 		%>
-		<li><a href="/Struts2_BookManage/top.jsp" style="font-size:25px;">返回</a></li>
+		<li><a href="/top.jsp" style="font-size:25px;">返回</a></li>
 </body>
 </html>

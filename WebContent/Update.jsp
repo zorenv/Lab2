@@ -53,7 +53,7 @@ body{font:.85em/1.2 "微软雅黑","microsoft yahei",arial;background:#f2f2f2;ba
             <label for="Price">价格：</label><input name="Price" type="text"/><br>
             
             <input type="submit" value="添加"/>
-            <input a href="/Struts2_BookManage/top.jsp" value="返回"/>
+            <input a href="/top.jsp" value="返回"/>
           </s:form>
     </div>
    

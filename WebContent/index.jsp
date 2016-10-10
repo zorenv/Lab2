@@ -98,9 +98,9 @@ input {
 		<h2><span class="fontawesome-lock"></span>欢迎登陆!</h2>
 		<form action="login" method="POST">
 			<fieldset>
-				<p><label for="username">请输入你的用户名：</label></p>
+				<p><label for="username">请输入你的用户名(admin)：</label></p>
 				<p><input type="text" id="username" name="username" value=""></p> 
-				<p><label for="password">请输入你的密码：</label></p>
+				<p><label for="password">请输入你的密码(admin)：</label></p>
 				<p><input type="password" id="password" name="password" value=""></p>
 				<p><input type="submit" value="登录">
 			</fieldset>

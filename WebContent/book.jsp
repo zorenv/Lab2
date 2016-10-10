@@ -11,7 +11,7 @@
 <meta name="apple-touch-fullscreen" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 <meta name="format-detection" content="telephone=no,email=no"/>
-<meta name="author" content="kuangmeng"/>
+<meta name="author" content="zorenv"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>书籍信息</title>
 <style type="text/css">
@@ -191,6 +191,6 @@ h3{text-shadow:0 2px #ccc;}
     	}
       }
 		%>
-		<li ><a href="/Struts2_BookManage/top.jsp" style="font-size:25px;">返回</a></li>
+		<li ><a href="/top.jsp" style="font-size:25px;">返回</a></li>
 </body>
 </html>
