@@ -8,7 +8,7 @@ public class SQLSearch{
     //  数据库用户和密码
     //static final String USER = "root";
     //static final String PASS = "112122";
-    String DB_URL = "jdbc:mysql://dmrsesekwhul.rds.sae.sina.com.cn:10510/bookmanage";
+    String DB_URL = "jdbc:mysql://dmrsesekwhul.rds.sae.sina.com.cn:10510/bookdb";
     String USER = "bookmanage";
     String PASS = "112122";
     //表名   

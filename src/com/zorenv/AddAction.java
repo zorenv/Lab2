@@ -27,7 +27,7 @@ public class AddAction extends ActionSupport{
       //static final String USER = "root";
       //static final String PASS = "112122";
       //static final String taname = "BookManage";
-      String DB_URL = "jdbc:mysql://dmrsesekwhul.rds.sae.sina.com.cn:10510/bookmanage";
+      String DB_URL = "jdbc:mysql://dmrsesekwhul.rds.sae.sina.com.cn:10510/bookdb";
       String USER = "bookmanage";
       String PASS = "112122";
       //±íÃû   
