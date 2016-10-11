@@ -140,7 +140,6 @@ input[id="addBooks"] {
 					out.print("作者");
 				%>
 			</th>
-			
 			<th>
 				<%
 					out.print("删除");
@@ -220,6 +219,7 @@ input[id="addBooks"] {
 		%>
 	</table>
 	<li ><a href="/top.jsp" style="font-size:25px;">返回</a></li>
+
 	<%
 	if(no==0 && book!=null){
 			%>
